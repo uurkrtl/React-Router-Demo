@@ -8,9 +8,7 @@ export default function CharacterCard(props: CharacterCardProps) {
 
     return (
         <div>
-            <p>
-                {props.character.name}
-            </p>
+            <a href={`/character/${props.character.id}`}>{props.character.name}</a>
             <p>
                 {props.character.species}
             </p>
