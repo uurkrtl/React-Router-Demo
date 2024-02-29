@@ -6,6 +6,7 @@ import CharacterGallery from "./CharacterGallery.tsx";
 import {Route, Routes} from "react-router-dom";
 import Header from "./Header.tsx";
 import CharacterDetailCard from "./CharacterDetailCard.tsx";
+import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
 

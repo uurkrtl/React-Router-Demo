@@ -17,16 +17,43 @@ function CharacterDetailCard(props: CharacterGalleryProps) {
                 props.characters.map(character => {
                     if (character.id === parseInt(params.id || '')) {
                         return (
-                            <div>
-                                <p>
-                                    {character.name}
-                                </p>
-                                <p>
-                                    {character.species}
-                                </p>
-                                <p>
-                                    {character.status}
-                                </p>
+                            <div className="container mt-3">
+                                <div className="py-5 text-center">
+                                    <img className="d-block mx-auto mb-3"
+                                         src={character.image} alt="" width="172" height="157"/>
+                                    <h2>{character.name}</h2>
+                                </div>
+                                <div className="row g-5">
+                                    <div className="col-md-7 col-lg-12">
+                                        <div className="row g-3">
+
+                                            <div className="col-4">
+                                                <div className="input-group has-validation">
+                                                    <span className="input-group-text">Species</span>
+                                                    <input type="text" className="form-control"
+                                                           value={character.species} readOnly={true}/>
+                                                </div>
+                                            </div>
+
+                                            <div className="col-4">
+                                                <div className="input-group has-validation">
+                                                    <span className="input-group-text">Status</span>
+                                                    <input type="text" className="form-control" value={character.status}
+                                                           readOnly={true}/>
+                                                </div>
+                                            </div>
+
+                                            <div className="col-4">
+                                                <div className="input-group has-validation">
+                                                    <span className="input-group-text">Gender</span>
+                                                    <input type="text" className="form-control" value={character.gender}
+                                                           readOnly={true}/>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         )
                     }

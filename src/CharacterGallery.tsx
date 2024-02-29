@@ -9,12 +9,17 @@ export default function CharacterGallery(props: CharacterGalleryProps) {
 
     return (
         <div>
-            <p>
-                Gallery
-            </p>
-            {props.characters.map(character => <CharacterCard
-                                                                key={character.id}
-                                                                character={character}/>)}
+            <div className="album py-5 bg-body-tertiary mt-4">
+                <div className="container">
+                    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+
+                        {props.characters.map(character => <CharacterCard
+                            key={character.id}
+                            character={character}/>)}
+
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
