@@ -9,15 +9,11 @@ function CharacterDetailCard(props: CharacterGalleryProps) {
     const params = useParams();
     return (
         <div>
-            <h2>
-                Character Detail Card
-            </h2>
-
             {
                 props.characters.map(character => {
                     if (character.id === parseInt(params.id || '')) {
                         return (
-                            <div className="container mt-3">
+                            <div className="container mt-5" key={character.id}>
                                 <div className="py-5 text-center">
                                     <img className="d-block mx-auto mb-3"
                                          src={character.image} alt="" width="172" height="157"/>

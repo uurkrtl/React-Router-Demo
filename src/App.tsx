@@ -17,6 +17,7 @@ function App() {
             <Header/>
             <Routes>
                 <Route path="/home/wellcome" element={<Wellcome/>}/>
+                <Route path="/" element={<Wellcome/>}/>
                 <Route path="/characters" element={<CharacterGallery characters={characters}/>}/>
                 <Route path={"/character/:id"} element={<CharacterDetailCard characters={characters} />} />
             </Routes>
