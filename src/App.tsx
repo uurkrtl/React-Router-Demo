@@ -7,6 +7,7 @@ import {Route, Routes} from "react-router-dom";
 import Header from "./Header.tsx";
 import CharacterDetailCard from "./CharacterDetailCard.tsx";
 import 'bootstrap/dist/css/bootstrap.css';
+import AddCharacter from "./AddCharacter.tsx";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/" element={<Wellcome/>}/>
                 <Route path="/characters" element={<CharacterGallery characters={characters}/>}/>
                 <Route path={"/character/:id"} element={<CharacterDetailCard characters={characters} />} />
+                <Route path={"/add-character"} element={<AddCharacter />} />
             </Routes>
         </>
     )

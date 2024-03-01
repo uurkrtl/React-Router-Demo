@@ -16,6 +16,9 @@ function Header() {
                             <li className="nav-item">
                                 <a className="nav-link" href="/characters">Characters</a>
                             </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/add-character">Create Character</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
